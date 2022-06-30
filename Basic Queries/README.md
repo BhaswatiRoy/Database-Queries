@@ -3,4 +3,4 @@
 3. `INSERT INTO mathtest VALUES (1.5, 1.7,2.5,2.7)` - insert the 4 values into 4 columns d1,d2,f1,f2
 4. `SELECT d1+d2 FROM mathtest` - select d1,d2 and add them up to display
 5. `CREATE DATABASE dbname` - creates a new database/schema with name dbname
-6. 
+6. `DROP TABLE `schemaname`.`tbname`` - drops the table with name 'tbname' from the schema 'schemaname'
