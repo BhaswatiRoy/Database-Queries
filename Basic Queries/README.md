@@ -4,12 +4,7 @@
 4. `SELECT d1+d2 FROM mathtest` - select d1,d2 and add them up to display
 5. `CREATE DATABASE dbname` - creates a new database/schema with name dbname
 6. `DROP TABLE 'schemaname'.'tbname'` - drops the table with name 'tbname' from the schema 'schemaname' //this can be manually done also
-7. ` CREATE TABLE musictable
-
-     (id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
-     
-     title VARCHAR(100),
-     
-     genre VARCHAR(20),
-     
-     release_year INT); `
+7. `CREATE TABLE musictable (id INT PRIMARY KEY NOT NULL AUTO_INCREMENT, title VARCHAR(100), genre VARCHAR(20), release_year INT);` - create tables with given column names and details under each column name
+8. `ALTER TABLE tbname` - specifies the table that needs to be altered/modified
+9. `ADD COLUMN columnname dtype` - adds/creates a column with name 'columnname' and data type 'dtype'
+10. `RENAME COLUMN oldname TO newname` - changes the column name from 'oldname' to 'newname'
