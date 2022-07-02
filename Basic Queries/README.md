@@ -17,5 +17,7 @@
 17. `SELECT * FROM tbname WHERE id <= X` - shows all the rows where id <= X in which X can be any value
 18. `SELECT * FROM tbname WHERE c1 LIKE 'ABC' - shows all the rows where the value in the column with column name c1 values are 'ABC'
 19. `SELECT * FROM tbname WHERE c1 NOT LIKE 'ABC' - shows all the rows where the value in the column with column name c1 values are 'ABC'
-20. `SELECT * FROM movies_basic WHERE c1 LIKE 'ABC' AND c2>X` - shows all rows that satisfy both conditions of AND operation
-21. `SELECT * FROM movies_basic WHERE c1 LIKE 'ABC' OR c2>X` - shows all rows that satisfy any one conditions of OR operation
+20. `SELECT * FROM tbnam WHERE c1 LIKE 'ABC' AND c2>X` - shows all rows that satisfy both conditions of AND operation
+21. `SELECT * FROM tbname WHERE c1 LIKE 'ABC' OR c2>X` - shows all rows that satisfy any one conditions of OR operation
+22. `SELECT * FROM tbname WHERE LENGTH(c1)>10` - shows all rows that has length of characters of the value in column 'c1' >10
+23. 
