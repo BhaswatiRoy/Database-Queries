@@ -20,4 +20,8 @@
 20. `SELECT * FROM tbnam WHERE c1 LIKE 'ABC' AND c2>X` - shows all rows that satisfy both conditions of AND operation
 21. `SELECT * FROM tbname WHERE c1 LIKE 'ABC' OR c2>X` - shows all rows that satisfy any one conditions of OR operation
 22. `SELECT * FROM tbname WHERE LENGTH(c1)>10` - shows all rows that has length of characters of the value in column 'c1' >10
-23. 
+23. `SELECT c1 AS 'C1', IF (c2>6,'Good','Bad') AS 'C2' FROM tbname` - shows all c1 values and replaces c2 value with 'Good' if >6 otherwise replaces c2 value with 'Bad'. It also replaces the column name 'c1' with 'C1' & column name 'c2' with 'C2'
+24. `SELECT c1 AS 'C1', CASE WHEN c2<5 THEN 'Bad' WHEN c2<8 THEN 'DESCENT' ELSE 'GOOD' END AS 'c2' FROM tbname` - does the same operation as last command only difference is here CASE is used
+25. `INSERT INTO tbname (c1,c2) VALUES ('value1','value2')` - insert the values 'value1' & 'value2' into columns 'c1' & 'c2'. We can also add multiple values at a time
+26. `UPDATE tbname SET c1 = 'Y' WHERE c1='X'`- sets column c1 value to 'Y' from 'X'. This is only possible in a non safe environment in MySQL as MySQL Workbench has safe environment by default so we need to change it before we use this.
+27. `DELETE FROM tbname WHERE c1 < x` - deletes the values of the column which has 
