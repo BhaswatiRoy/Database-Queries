@@ -25,3 +25,6 @@
 25. `INSERT INTO tbname (c1,c2) VALUES ('value1','value2')` - insert the values 'value1' & 'value2' into columns 'c1' & 'c2'. We can also add multiple values at a time
 26. `UPDATE tbname SET c1 = 'Y' WHERE c1='X'`- sets column c1 value to 'Y' from 'X'. This is only possible in a non safe environment in MySQL as MySQL Workbench has safe environment by default so we need to change it before we use this.
 27. `DELETE FROM tbname WHERE c1 < x` - deletes the values of the column which has 
+28. `SELECT tbname1.c1 , tbname2.c3 FROM tbname1 INNER JOIN tbname2 ON tbname1.id=tbname2.id` - Inner join 2 tables on basis of id primary key column
+29. `SELECT tbname1.c1 , tbname2.c3 , tbname3.c5 FROM tbname1 INNER JOIN tbname2 ON tbname1.id=tbname2.id JOIN tbname2 ON tbname1.id=tbname3.id` - Inner join 3 tables on basis of id primary key column
+30. 
