@@ -29,3 +29,5 @@
 29. `SELECT tbname1.c1 , tbname2.c3 , tbname3.c5 FROM tbname1 INNER JOIN tbname2 ON tbname1.id=tbname2.id JOIN tbname2 ON tbname1.id=tbname3.id` - Inner join 3 tables on basis of id primary key column
 30. `SELECT tbname1.c2, tbname2.c4 FROM tbname1 LEFT OUTER JOIN tbname2 ON tbname1.id=tbname2.id` - Left Outer Join 2 tables on basis of id primary key column
 31. `SELECT tbname1.c2, tbname2.c4 FROM tbname1 RIGHT OUTER JOIN tbname2 ON tbname1.id=tbname2.id`- Right Outer Join 2 tables on basis of id primary key column
+32. `SELECT DISTINCT c1 FROM tbname` - Selects distinct values of column c1 from table tbname
+33. `SELECT * FROM tbname WHERE NOT c1='X'` - selects rows where column value for column c1 is not X
