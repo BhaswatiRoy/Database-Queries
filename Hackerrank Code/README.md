@@ -1,9 +1,9 @@
-1. `Revising the Select Query I`
+`1. Revising the Select Query I`
 
     SELECT * FROM CITY WHERE CountryCode='USA' AND POPULATION>100000;
 
 
-2. `Revising the Select Query II`
+`2. Revising the Select Query II`
 
     SELECT NAME FROM CITY WHERE POPULATION>120000 AND COUNTRYCODE='USA';
 
