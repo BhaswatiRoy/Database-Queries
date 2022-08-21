@@ -51,4 +51,48 @@
      ON USERS.ACCOUNT=TRANSACTIONS.ACCOUNT
      GROUP BY TRANSACTIONS.ACCOUNT HAVING SUM(TRANSACTIONS.AMOUNT)>10000
      
-``
+`1965. Employees With Missing Information`
+
+     --UNION is used to combine results of 2 or more select statements, columns must have similar data and must be in similar order
+     --this part means entire employees and common part of salaries & employees so NULL values of salaries are missing information
+     SELECT EMPLOYEES.EMPLOYEE_ID 
+     FROM EMPLOYEES LEFT JOIN SALARIES
+     ON EMPLOYEES.EMPLOYEE_ID=SALARIES.EMPLOYEE_ID
+     WHERE SALARIES.EMPLOYEE_ID IS NULL
+     UNION
+     --this part means entire salaries and common part of salaries & employees so NULL values of employees are missing information
+     SELECT SALARIES.EMPLOYEE_ID 
+     FROM SALARIES LEFT JOIN EMPLOYEES
+     ON EMPLOYEES.EMPLOYEE_ID=SALARIES.EMPLOYEE_ID
+     WHERE EMPLOYEES.EMPLOYEE_ID IS NULL
+     ORDER BY EMPLOYEE_ID;
+
+`595. Big Countries`
+
+     SELECT NAME,POPULATION,AREA
+     FROM WORLD
+     WHERE AREA>=3000000 OR POPULATION>=25000000
+     
+`1407. Top Travellers`
+    
+     --if there is any user who didn't travel any distance then mark them as 0 otherwise find sum of distance of all other users who travelled some distance
+     SELECT USERS.NAME, SUM(IFNULL(RIDES.DISTANCE,0)) AS TRAVELLED_DISTANCE
+     FROM USERS LEFT JOIN RIDES
+     ON USERS.ID=RIDES.USER_ID
+     GROUP BY RIDES.USER_ID
+     ORDER BY TRAVELLED_DISTANCE DESC, NAME ASC
+     
+`620. Not Boring Movies`
+     
+     SELECT ID,MOVIE,DESCRIPTION,RATING 
+     FROM CINEMA
+     WHERE ID%2!=0 
+     AND DESCRIPTION != "BORING"
+     ORDER BY RATING DESC
+     
+`1050. Actors and Directors Who Cooperated At Least Three Times`
+     
+     SELECT ACTOR_ID,DIRECTOR_ID
+     FROM ACTORDIRECTOR
+     GROUP BY ACTOR_ID,DIRECTOR_ID
+     HAVING COUNT(*)>=3
