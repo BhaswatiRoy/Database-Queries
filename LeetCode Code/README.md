@@ -23,6 +23,7 @@
      HAVING COUNT(EMAIL)>1;
      
 `183. Customers Who Never Order`
+
      SELECT CUSTOMERS.NAME AS Customers FROM CUSTOMERS
      WHERE CUSTOMERS.ID NOT IN (SELECT ORDERS.CUSTOMERID FROM ORDERS);
      
@@ -33,6 +34,7 @@
      GROUP BY PLAYER_ID;
 
 `1741. Find Total Time Spent by Each Employee`
+
      SELECT EVENT_DAY AS day, EMP_ID AS emp_id, SUM(OUT_TIME-IN_TIME) AS total_time FROM EMPLOYEES
      GROUP BY EMP_ID,DAY;
      
