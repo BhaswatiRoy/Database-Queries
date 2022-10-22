@@ -30,3 +30,8 @@ alter table employee rename column id to roll_no;
 
 alter table employee rename to emp;
 
+`7. Update Table - Change Data Values`
+
+update employee set salary = salary *2 where id=4;
+
+8. 
