@@ -1,4 +1,6 @@
-### 1. Write an SQL query to display maximum/highest salary from 'employee' table
+## Employee Table - Id, Name, Department, Salary
+
+### 1. Write an SQL query to display maximum/highest salary 
 
 select max(salary) from employee;
 
@@ -17,3 +19,24 @@ select name from employee where salary = (select max(salary) from employee where
 ### 5. Write an SQL query to display all the department names along with number/count of employees working in that
 
 select department, count( * ) from employee group by department;
+
+### 6. Write a query to display all employee names of the departments where number of employees are less than 2
+
+select name from employee where department in (select department from employee group by department having count( * ) < 2);
+
+### 7. Write a query to display highest salary department wise and name of employees who is taking that salary
+
+select name from employee where salary in (select max(salary) from employee group by department);
+
+
+## Employee Table - EId(primary key), EName, Address & Project Table - EId(primary key), PId (foreign key), PName, Location
+
+### 8. Write a query to find details of employee whose address is either Delhi/Chandigarh/Pune
+
+select * from employee where address in ('Delhi', 'Chandigarh', 'Pune');
+
+### 9. Write a query to find details of employee whose address is not amongst Delhi/Chandigarh/Pune
+
+select * from employee where address not in ('Delhi', 'Chandigarh', 'Pune');
+
+### 10. 
