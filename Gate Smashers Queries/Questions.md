@@ -59,3 +59,7 @@ select * from employee where eid not exists (select eid from project where proje
 
 select distinct(sum(salary)) from employee;
 
+### 15. Write a query to find the name and salary value of nth highest salary
+
+select name,salary from employee e1 where n-1 = (select count(distinct(salary)) from employee e2 where e2.salary > e1.salary)
+
